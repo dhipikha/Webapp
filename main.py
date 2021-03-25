@@ -3,13 +3,13 @@ from flask import Flask, render_template, request, url_for, jsonify
 from fastai.basic_train import load_learner
 from fastai.vision import open_image
 from flask_cors import CORS, cross_origin
-from flask_ngrok import run_with_ngrok
+
 import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
-run_with_ngrok(app)
+
  
 
 @app.route('/')
